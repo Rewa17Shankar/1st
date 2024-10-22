@@ -1,38 +1,38 @@
-.App {
-  text-align: center;
+.mode-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .circle {
+      width: 20px; /* Diameter of the circle */
+      height: 20px; /* Diameter of the circle */
+      border-radius: 50%; /* Makes the div a circle */
+      border: 0.5px solid black; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  footer {
+      padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  ul.footer-list {
+      list-style: none; /* Removes bullet points */
+      padding: 0;
+      margin: 0;
+      display: flex; /* Aligns items horizontally */
+      gap: 15px; /* Spacing between items */
   }
-}
+  
+  ul.footer-list li {
+      margin: 0; /* Removes default margin */
+  }
+  .footer-button {
+      border: none; /* Removes border */
+      background: none; /* Removes background color */
+      padding: 0; /* Removes padding */
+      font: inherit; /* Inherits font from parent */
+      cursor: pointer; /* Makes button clickable */
+      
+  }

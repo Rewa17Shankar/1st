@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar'
+import Recent from './components/Recent'
+import All from './components/All'
+import Footer from './components/Footer'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  const [curmode, setCurmode] = useState("light");
+
+  const toggleMode = () => {
+    if (curmode === "light") {
+      setCurmode("dark");
+      document.body.style.backgroundColor = "black";
+    } else {
+      setCurmode("light");
+      document.body.style.backgroundColor = "white";
+    }
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar toggleMode={toggleMode} curmode={curmode} />
+    <h1 style={{fontSize: '8.5rem', textAlign: 'center'}}>THE BLOG</h1>
+    <Recent/>
+    <All/>
+    <Footer/>
+
+    </>
   );
 }
 
